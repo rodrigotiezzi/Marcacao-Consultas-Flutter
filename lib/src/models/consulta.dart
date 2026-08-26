@@ -20,4 +20,24 @@ class Consulta {
     required this.status,
     this.observacoes,
   });
+
+  Consulta copyWith({
+    int? id,
+    Medico? medico,
+    Paciente? paciente,
+    DateTime? data,
+    double? valor,
+    StatusConsulta? status,
+    String? observacoes,
+  }) {
+    return Consulta(
+      id: id ?? this.id,
+      medico: medico ?? this.medico,
+      paciente: paciente ?? this.paciente,
+      data: data ?? this.data,
+      valor: valor ?? this.valor,
+      status: status ?? this.status,
+      observacoes: observacoes ?? this.observacoes,
+    );
+  }
 }
